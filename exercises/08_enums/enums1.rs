@@ -4,7 +4,7 @@ enum Message {
     Move,
     Echo,
     ChangeColor,
-    Quit,
+    Quit, // TODO: Define a few types of messages as used below.
 }
 
 fn main() {

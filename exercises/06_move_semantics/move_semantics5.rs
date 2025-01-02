@@ -18,7 +18,8 @@ fn string_uppercase(mut data: String) {
 fn main() {
     let data = "Rust is great!".to_string();
 
-    get_char(&data);
+    let c = get_char(&data);
 
-    string_uppercase(data);
+    let d = string_uppercase(data);
+    println!("{:?}{:?}", c, d);
 }

@@ -4,6 +4,4 @@ fn main() {
     call_me(); // Don't change this line
 }
 
-fn call_me() {
-    //nothing to be executed
-}
+fn call_me() {}

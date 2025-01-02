@@ -4,20 +4,15 @@ fn trim_me(input: &str) -> &str {
 }
 
 fn compose_me(input: &str) -> String {
-    let newstr = input.to_owned() + " world!";
-    newstr
+    format!("{} world!", input)
     // TODO: Add " world!" to the string! There are multiple ways to do this.
 }
 
 fn replace_me(input: &str) -> String {
-    let chars: String = input.replace("cars", "balloons");
-    chars // TODO: Replace "cars" in the string with "balloons".
+    input.replace("cars", "balloons")
 }
 
 fn main() {
-    let letters = "i love cars".replace("cars", "balloons");
-    println!("{}", letters);
-
     // You can optionally experiment here.
 }
 

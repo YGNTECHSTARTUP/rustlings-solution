@@ -8,6 +8,18 @@ struct Package {
     weight_in_grams: u32,
 }
 
+#[derive(Debug)]
+struct PP {
+    id: u32,
+    name: String,
+}
+
+impl PP {
+    fn new(id: u32, name: String) -> Self {
+        Self { id, name }
+    }
+}
+
 impl Package {
     fn new(sender_country: String, recipient_country: String, weight_in_grams: u32) -> Self {
         if weight_in_grams < 10 {
@@ -15,7 +27,6 @@ impl Package {
             // learn about error handling later.
             panic!("Can't ship a package with weight below 10 grams");
         }
-
         Self {
             sender_country,
             recipient_country,
@@ -25,18 +36,18 @@ impl Package {
 
     // TODO: Add the correct return type to the function signature.
     fn is_international(&self) -> bool {
+        if self.sender_country == self.recipient_country {
+            false
+        } else {
+            true
+        }
         // TODO: Read the tests that use this method to find out when a package
         // is considered international.
-        if &self.sender_country == &self.recipient_country {
-            return false;
-        }
-        return true;
     }
 
     // TODO: Add the correct return type to the function signature.
     fn get_fees(&self, cents_per_gram: u32) -> u32 {
-        // TODO: Calculate the package's fees
-        return self.weight_in_grams * cents_per_gram;
+        cents_per_gram * self.weight_in_grams
     }
 }
 

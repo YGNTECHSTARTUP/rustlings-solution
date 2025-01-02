@@ -3,6 +3,13 @@
 // - Functions
 // - If
 //
+fn calculate_price_of_apples(num: i32) -> i32 {
+    if num > 40 {
+        num
+    } else {
+        num * 2
+    }
+}
 // Mary is buying apples. The price of an apple is calculated as follows:
 // - An apple costs 2 rustbucks.
 // - However, if Mary buys more than 40 apples, the price of each apple in the
@@ -12,14 +19,8 @@
 // the quantity bought.
 // fn calculate_price_of_apples(???) -> ??? { ??? }
 
-fn main() {}
-
-fn calculate_price_of_apples(num: i32) -> i32 {
-    if num > 40 {
-        num
-    } else {
-        num * 2
-    }
+fn main() {
+    // You can optionally experiment here.
 }
 
 // Don't change the tests!

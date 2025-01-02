@@ -9,10 +9,10 @@ struct Point {
 #[derive(Debug)]
 enum Message {
     Move(Point),
-    Quit,
     Echo(String),
-    ChangeColor(u8, u8, u8),
-    Resize { width: u32, height: u32 },
+    ChangeColor(u32, u32, u32),
+    Quit,
+    Resize { height: u32, width: u32 },
 }
 
 impl Message {

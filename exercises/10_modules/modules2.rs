@@ -4,15 +4,16 @@
 #[allow(dead_code)]
 mod delicious_snacks {
     // TODO: Add the following two `use` statements after fixing them.
-    // use self::fruits::PEAR as ???;
-    // use self::veggies::CUCUMBER as ???;
-
-    pub mod fruits {
+    pub use self::fruits::APPLE as apple;
+    pub use self::fruits::PEAR as pear;
+    pub use self::veggies::CARROT as carrot;
+    pub use self::veggies::CUCUMBER as cucumber;
+    mod fruits {
         pub const PEAR: &str = "Pear";
         pub const APPLE: &str = "Apple";
     }
 
-    pub mod veggies {
+    mod veggies {
         pub const CUCUMBER: &str = "Cucumber";
         pub const CARROT: &str = "Carrot";
     }
@@ -21,7 +22,7 @@ mod delicious_snacks {
 fn main() {
     println!(
         "favorite snacks: {} and {}",
-        delicious_snacks::fruits::PEAR,
-        delicious_snacks::veggies::CUCUMBER
+        delicious_snacks::apple,
+        delicious_snacks::pear
     );
 }

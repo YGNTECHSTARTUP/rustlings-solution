@@ -16,9 +16,7 @@ fn main() {
     println!(r#"                               |___/      "#);
     println!();
     println!("This exercise compiles successfully. The remaining exercises contain a compiler");
-    println!("Hello I am RustAcean");
     println!("or logic error. The central concept behind Rustlings is to fix these errors and");
-    println!("Happy TO Be Take Part in Rustlings");
     println!("solve the exercises. Good luck!");
     println!();
     println!("The file of this exercise is `exercises/00_intro/intro1.rs`. Have a look!");
